@@ -257,7 +257,7 @@ Create profile lab7 using account B user credentials
 Assume Role
 ```bash
 aws sts assume-role \
-  --role-arn arn:aws:iam::ACCOUNT_A_ID:role/Lab7-AdminRole \
+  --role-arn arn:aws:iam::ACCOUNT_A_ID:role/Lab7-CrossAccountRole \
   --role-session-name test \
   --profile lab7
 ```
@@ -285,12 +285,12 @@ aws sts get-caller-identity --profile lab7_new
 
 Should show:
 ```bash
-arn:aws:sts::ACCOUNT_A_ID:assumed-role/Lab7-AdminRole
+arn:aws:sts::ACCOUNT_A_ID:assumed-role/Lab7-CrossAccountRole
 ```
 
 Test:
 ```bash
-aws s3 ls s3://lab7-secure-cross-account-bucket-12345
+aws s3 ls s3://lab7-secure-cross-account-bucket-12345 --profile lab7-new
 ```
 
 
