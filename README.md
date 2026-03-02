@@ -69,7 +69,7 @@ aws sts get-caller-identity --profile lab2
 
 Expected ARN:
 ```json
-arn:aws:iam::919466768129:user/lab2-user
+arn:aws:iam::ACCOUNT_ID:user/lab2-user
 ```
 🪣 Test Access
 ```bash
@@ -110,7 +110,7 @@ aws sts get-caller-identity --profile lab3
 
 Expected:
 ```json
-arn:aws:iam::919466768129:user/lab-upload-user
+arn:aws:iam::ACCOUNT_ID:user/lab-upload-user
 ```
 🪣 Test Access
 ```bash
